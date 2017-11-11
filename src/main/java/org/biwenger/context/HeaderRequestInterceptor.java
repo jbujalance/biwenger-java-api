@@ -1,30 +1,33 @@
 package org.biwenger.context;
 
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpRequest;
 import org.springframework.http.client.ClientHttpRequestExecution;
 import org.springframework.http.client.ClientHttpRequestInterceptor;
 import org.springframework.http.client.ClientHttpResponse;
 
 import java.io.IOException;
-import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public class HeaderRequestInterceptor implements ClientHttpRequestInterceptor {
 
-    private Map<String, String> headers = new HashMap<>();
+    private HttpHeaders headers;
 
-    public void addHeader(final String pHeaderName, final String pHeaderValue) {
-        this.headers.put(pHeaderName, pHeaderValue);
+    void setHeaders(final HttpHeaders pHeaders) {
+        this.headers = pHeaders;
     }
 
-    public void addHeaders(final Map<String, String> pHeaders) {
-        this.headers.putAll(pHeaders);
+    void addHeader(final String pHeaderName, final String pHeaderValue) {
+        this.headers.add(pHeaderName, pHeaderValue);
     }
 
     @Override
     public ClientHttpResponse intercept(HttpRequest request, byte[] body, ClientHttpRequestExecution execution) throws IOException {
-        for (Map.Entry<String, String> entry : this.headers.entrySet()) {
-            request.getHeaders().add(entry.getKey(), entry.getValue());
+        Set<Map.Entry<String, List<String>>> entries = this.headers.entrySet();
+        for (Map.Entry<String, List<String>> entry : this.headers.entrySet()) {
+            request.getHeaders().add(entry.getKey(), entry.getValue().get(0));
         }
         return execution.execute(request, body);
     }
