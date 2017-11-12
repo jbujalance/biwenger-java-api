@@ -3,7 +3,7 @@ package org.biwenger.entity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.biwenger.context.BiwengerApiContext;
-import org.biwenger.response.LoginResponse;
+import org.biwenger.response.login.LoginResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -51,6 +51,7 @@ public class Login {
     }
 
     public void logInForToken(final BiwengerApiContext pContext) {
+        //TODO import URL from config class or file or context
         LoginResponse loginResponse = pContext.getRestTemplate().postForObject("https://biwenger.as.com/api/v1/auth/login", this, LoginResponse.class);
         this.token = loginResponse.getToken();
         LOGGER.info("Successfully logged as '" + email + "'");

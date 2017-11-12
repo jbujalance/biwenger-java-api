@@ -1,13 +1,13 @@
 package org.biwenger;
 
 import org.biwenger.context.BiwengerApiContext;
-import org.biwenger.context.BiwengerRestException;
 import org.biwenger.entity.Login;
+import org.biwenger.exception.BiwengerRestException;
 import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
 
-public class BiwengerApiContextTest {
+public class BiwengerApiContextTest extends ContextTestHelper {
 
     @Test
     public void validLoginTest() {
@@ -17,7 +17,7 @@ public class BiwengerApiContextTest {
         // WHEN a context is created using this login
         BiwengerApiContext context = new BiwengerApiContext(login);
 
-        // THEN the login is succesfully logged
+        // THEN the login is successfully logged
         assertTrue(login.isLogged());
     }
 

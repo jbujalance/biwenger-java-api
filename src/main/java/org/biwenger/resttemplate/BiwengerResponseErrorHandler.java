@@ -1,7 +1,8 @@
-package org.biwenger.context;
+package org.biwenger.resttemplate;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.io.IOUtils;
+import org.biwenger.exception.BiwengerRestException;
 import org.springframework.http.client.ClientHttpResponse;
 import org.springframework.web.client.ResponseErrorHandler;
 

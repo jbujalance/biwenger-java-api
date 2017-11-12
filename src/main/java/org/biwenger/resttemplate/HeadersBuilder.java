@@ -1,4 +1,4 @@
-package org.biwenger.context;
+package org.biwenger.resttemplate;
 
 import org.springframework.http.HttpHeaders;
 

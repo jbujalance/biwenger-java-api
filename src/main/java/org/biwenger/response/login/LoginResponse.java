@@ -1,4 +1,4 @@
-package org.biwenger.response;
+package org.biwenger.response.login;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

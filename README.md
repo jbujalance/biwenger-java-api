@@ -1,2 +1,2 @@
 # biwenger-java-api
-A Java API for Biwenger that uses the existing official REST API
+A Java API for Biwenger that act as a client of the existing official REST API.

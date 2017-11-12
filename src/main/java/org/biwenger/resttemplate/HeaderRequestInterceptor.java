@@ -1,4 +1,4 @@
-package org.biwenger.context;
+package org.biwenger.resttemplate;
 
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpRequest;
@@ -15,11 +15,11 @@ public class HeaderRequestInterceptor implements ClientHttpRequestInterceptor {
 
     private HttpHeaders headers;
 
-    void setHeaders(final HttpHeaders pHeaders) {
+    public void setHeaders(final HttpHeaders pHeaders) {
         this.headers = pHeaders;
     }
 
-    void addHeader(final String pHeaderName, final String pHeaderValue) {
+    public void addHeader(final String pHeaderName, final String pHeaderValue) {
         this.headers.add(pHeaderName, pHeaderValue);
     }
 

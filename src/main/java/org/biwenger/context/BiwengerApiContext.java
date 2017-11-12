@@ -1,11 +1,13 @@
 package org.biwenger.context;
 
+import com.fasterxml.jackson.databind.module.SimpleModule;
 import org.biwenger.entity.Login;
+import org.biwenger.resttemplate.*;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.Collections;
+import java.time.LocalDateTime;
 
 /**
  * The context of the API. Contains the settings to access the API such as the user credentials or the URLs.
@@ -22,9 +24,8 @@ public class BiwengerApiContext {
         this.initializeHeaders();
         this.initializeRestTemplate();
         this.logInIfNecessary();
+        // TODO load account headers
     }
-
-
 
     public RestTemplate getRestTemplate() {
         if (restTemplate == null) {
@@ -36,9 +37,16 @@ public class BiwengerApiContext {
     private void initializeRestTemplate() {
         SimpleClientHttpRequestFactory requestFactory = new SimpleClientHttpRequestFactory();
         requestFactory.setOutputStreaming(false);
-        restTemplate = new RestTemplate(requestFactory);
-        restTemplate.setInterceptors(Collections.singletonList(headerInterceptor));
-        restTemplate.setErrorHandler(new BiwengerResponseErrorHandler());
+
+        SimpleModule localDateTimeModule = new SimpleModule();
+        localDateTimeModule.addDeserializer(LocalDateTime.class, new LocalDateTimeDeserializer(LocalDateTime.class));
+
+        restTemplate = new RestTemplateBuilder()
+                .withClientHttpRequestFactory(requestFactory)
+                .withClientHttpRequestInterceptors(headerInterceptor)
+                .withResponseErrorHandler(new BiwengerResponseErrorHandler())
+                .withObjectMapperModule(localDateTimeModule)
+                .build();
     }
 
     private void initializeHeaders() {
@@ -56,6 +64,10 @@ public class BiwengerApiContext {
             this.login.logInForToken(this);
         }
         headerInterceptor.addHeader(HttpHeaders.AUTHORIZATION, "Bearer " + login.getToken());
+    }
+
+    public String getLoginEmail() {
+        return this.login.getEmail();
     }
 
 }

@@ -1,10 +1,8 @@
-package org.biwenger.context;
+package org.biwenger.exception;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import java.io.IOException;
-
-public class BiwengerRestException extends IOException {
+public class BiwengerRestException extends RuntimeException {
     @JsonProperty("status")
     private int status;
     @JsonProperty("message")
@@ -50,6 +48,6 @@ public class BiwengerRestException extends IOException {
 
     @Override
     public String getMessage() {
-        return "Status: " + status + ". Message: " + apiMessage + " (" + userMessage + "). Code: " + code;
+        return "Status: " + status + ". Message: " + apiMessage + ". Code: " + code;
     }
 }
