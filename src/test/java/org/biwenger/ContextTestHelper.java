@@ -2,6 +2,7 @@ package org.biwenger;
 
 import org.biwenger.context.BiwengerApiContext;
 import org.biwenger.entity.Login;
+import org.biwenger.exception.InvalidLoginException;
 
 public abstract class ContextTestHelper {
 
@@ -13,15 +14,15 @@ public abstract class ContextTestHelper {
         return new Login("invalidEmail", "invalidPassword");
     }
 
-    public BiwengerApiContext buildContext(Login pLogin) {
+    public BiwengerApiContext buildContext(Login pLogin) throws InvalidLoginException {
         return new BiwengerApiContext(pLogin);
     }
 
-    public BiwengerApiContext buildValidContext() {
+    public BiwengerApiContext buildValidContext() throws InvalidLoginException {
         return new BiwengerApiContext(validLogin());
     }
 
-    public BiwengerApiContext buildInvalidContext() {
+    public BiwengerApiContext buildInvalidContext() throws InvalidLoginException {
         return new BiwengerApiContext(invalidLogin());
     }
 }

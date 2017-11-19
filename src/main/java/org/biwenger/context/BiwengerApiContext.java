@@ -2,6 +2,7 @@ package org.biwenger.context;
 
 import com.fasterxml.jackson.databind.module.SimpleModule;
 import org.biwenger.entity.Login;
+import org.biwenger.exception.InvalidLoginException;
 import org.biwenger.resttemplate.*;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.client.SimpleClientHttpRequestFactory;
@@ -19,7 +20,7 @@ public class BiwengerApiContext {
     private static HeaderRequestInterceptor headerInterceptor;
     //TODO instantiate the config files containing the URLs from the properties files injected by Spring
 
-    public BiwengerApiContext(final Login pLogin) {
+    public BiwengerApiContext(final Login pLogin) throws InvalidLoginException {
         this.login = pLogin;
         this.initializeHeaders();
         this.initializeRestTemplate();
@@ -59,7 +60,7 @@ public class BiwengerApiContext {
         headerInterceptor.setHeaders(headers);
     }
 
-    private void logInIfNecessary() {
+    private void logInIfNecessary() throws InvalidLoginException {
         if (!this.login.isLogged()) {
             this.login.logInForToken(this);
         }
