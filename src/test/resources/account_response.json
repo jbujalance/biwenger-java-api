@@ -1,0 +1,273 @@
+{
+  "status": 200,
+  "data": {
+    "account": {
+      "id": 1739810,
+      "email": "test@tinoza.org",
+      "locale": "es",
+      "status": "valid",
+      "created": 1510486949,
+      "devices": []
+    },
+    "leagues": [
+      {
+        "id": 569297,
+        "name": "Test League",
+        "type": "normal",
+        "mode": "normal",
+        "created": 1510487057,
+        "scoreID": 1,
+        "icon": "",
+        "user": {
+          "id": 2399142,
+          "name": "My Test Team",
+          "icon": "",
+          "group": "manager",
+          "type": "normal",
+          "status": {
+            "points": 35,
+            "balance": 14010000,
+            "offers": 0,
+            "bids": 0
+          },
+          "favorites": []
+        },
+        "competition": "la-liga",
+        "settings": {
+          "secret": "hXbH8MKM7HxS",
+          "privacy": "public",
+          "onlyAdminNews": 0,
+          "cancellationClause": 0,
+          "immediateSales": 0,
+          "jackpot": 0,
+          "balance": "hidden",
+          "userOffers": "market",
+          "loans": "disabled",
+          "loansMinRounds": 1,
+          "challengesAllow": 1,
+          "roundDelayed": "recalculation",
+          "lineupAllowExtra": false,
+          "lineupReserves": false,
+          "favoritesAllow": false
+        },
+        "premiumPrice": [
+          14.99,
+          "€"
+        ]
+      }
+    ],
+    "version": 532,
+    "ads": {
+      "ads": [],
+      "features": {
+        "safeFrame": false,
+        "inText": true,
+        "admobInterstitial": false
+      },
+      "league-461277": {
+        "mobile": {
+          "all": {
+            "header": {
+              "type": "html",
+              "content": "<a href='https://www.electrocosto.com/' target='_blank' rel='external nofollow'><img src='https://www.electrocosto.com/newsletter/images/app/minibanner-biwenger-new.png' /></a>"
+            }
+          }
+        }
+      },
+      "desktop": {
+        "header": {
+          "header": {
+            "type": "dfp",
+            "block": "/7811748/biwenger_web",
+            "sizes": "[[980, 90], [728, 90]]",
+            "fallback": {
+              "type": "adsense",
+              "client": "ca-pub-5081994088919884",
+              "slot": 8855414055,
+              "format": "horizontal"
+            },
+            "hosts": "biwenger.as.com",
+            "competitions": [
+              1,
+              2
+            ],
+            "targeting": {
+              "pos": "ldb1"
+            }
+          },
+          "submenu": []
+        },
+        "sidebar": {
+          "left": [],
+          "right": {
+            "type": "adsense",
+            "client": "ca-pub-5081994088919884",
+            "slot": 2669279650,
+            "format": "rectangle,vertical"
+          }
+        },
+        "all": {
+          "content": {
+            "type": "dfp",
+            "block": "/7811748/biwenger_web",
+            "sizes": "[[1,1]]",
+            "fallback": {
+              "type": "adsense",
+              "client": "ca-pub-5081994088919884",
+              "slot": 7239080051
+            },
+            "hosts": "biwenger.as.com",
+            "competitions": [
+              1,
+              2
+            ],
+            "targeting": {
+              "pos": "nstd1"
+            }
+          },
+          "subcontent": {
+            "type": "adsense",
+            "client": "ca-pub-5081994088919884",
+            "slot": 8553243256
+          },
+          "footer": {
+            "type": "dfp",
+            "block": "/7811748/biwenger_web",
+            "sizes": "[[980,90],[980,250],[728,90]]",
+            "fallback": {
+              "type": "adsense",
+              "client": "ca-pub-5081994088919884",
+              "slot": 4146012855
+            },
+            "hosts": "biwenger.as.com",
+            "competitions": [
+              1,
+              2
+            ],
+            "targeting": {
+              "pos": "ldb3"
+            }
+          }
+        }
+      },
+      "mobile": {
+        "header": {
+          "anchor": []
+        },
+        "all": {
+          "header": {
+            "type": "dfp",
+            "id": "ad-mobile-header",
+            "block": "/7811748/biwenger_mob",
+            "block_android": "/7811748/biwenger_app/android",
+            "block_ios": "/7811748/biwenger_app/iphone",
+            "sizes": "[[320,50],[320,100]]",
+            "fallback": {
+              "type": "adsense",
+              "client": "ca-pub-5081994088919884",
+              "slot": 8855414055
+            },
+            "hosts": "biwenger.as.com",
+            "competitions": [
+              1,
+              2
+            ],
+            "targeting": {
+              "pos": "mldb2"
+            }
+          },
+          "content": {
+            "type": "dfp",
+            "block": "/7811748/biwenger_mob",
+            "block_android": "/7811748/biwenger_app/android",
+            "block_ios": "/7811748/biwenger_app/iphone",
+            "sizes": "[[300,250],[300,600]]",
+            "fallback": {
+              "type": "adsense",
+              "client": "ca-pub-5081994088919884",
+              "slot": 7239080051
+            },
+            "hosts": "biwenger.as.com",
+            "competitions": [
+              1,
+              2
+            ],
+            "targeting": {
+              "pos": "mpu1"
+            }
+          },
+          "subcontent": {
+            "type": "dfp",
+            "block": "/7811748/biwenger_mob",
+            "block_android": "/7811748/biwenger_app/android",
+            "block_ios": "/7811748/biwenger_app/iphone",
+            "sizes": "[[300,250],[336,280]]",
+            "fallback": {
+              "type": "adsense",
+              "client": "ca-pub-5081994088919884",
+              "slot": 8553243256
+            },
+            "hosts": "biwenger.as.com",
+            "competitions": [
+              1,
+              2
+            ],
+            "targeting": {
+              "pos": "mpu2"
+            }
+          },
+          "footer": {
+            "type": "dfp",
+            "block": "/7811748/biwenger_mob",
+            "block_android": "/7811748/biwenger_app/android",
+            "block_ios": "/7811748/biwenger_app/iphone",
+            "sizes": "[[300,250],[300,600],[320,50]]",
+            "fallback": {
+              "type": "adsense",
+              "client": "ca-pub-5081994088919884",
+              "slot": 4146012855
+            },
+            "hosts": "biwenger.as.com",
+            "competitions": [
+              1,
+              2
+            ],
+            "targeting": {
+              "pos": "mpu3"
+            }
+          }
+        }
+      },
+      "admob": {
+        "android": {
+          "common": {
+            "app": "ca-app-pub-5081994088919884~8174243653"
+          },
+          "banner": {
+            "id": "ca-app-pub-5081994088919884/9650976858"
+          },
+          "interstitial": {
+            "id": "ca-app-pub-5081994088919884/3604443256"
+          },
+          "rewardedVideo": {
+            "id": "ca-app-pub-5081994088919884/5081176456"
+          }
+        },
+        "ios": {
+          "common": {
+            "app": "ca-app-pub-5081994088919884~6837111253"
+          },
+          "banner": {
+            "id": "ca-app-pub-5081994088919884/8313844456"
+          },
+          "interstitial": {
+            "id": "ca-app-pub-5081994088919884/9790577652"
+          },
+          "rewardedVideo": {
+            "id": "ca-app-pub-5081994088919884/2267310850"
+          }
+        }
+      }
+    }
+  }
+}

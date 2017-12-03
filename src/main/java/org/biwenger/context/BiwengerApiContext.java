@@ -3,7 +3,12 @@ package org.biwenger.context;
 import com.fasterxml.jackson.databind.module.SimpleModule;
 import org.biwenger.entity.Login;
 import org.biwenger.exception.InvalidLoginException;
-import org.biwenger.resttemplate.*;
+import org.biwenger.jsonmapper.BiwengerObjectMapper;
+import org.biwenger.jsonmapper.LocalDateTimeDeserializer;
+import org.biwenger.resttemplate.BiwengerResponseErrorHandler;
+import org.biwenger.resttemplate.HeaderRequestInterceptor;
+import org.biwenger.resttemplate.HeadersBuilder;
+import org.biwenger.resttemplate.RestTemplateBuilder;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.web.client.RestTemplate;
@@ -18,11 +23,13 @@ public class BiwengerApiContext {
     private Login login;
     private static RestTemplate restTemplate;
     private static HeaderRequestInterceptor headerInterceptor;
+    private static BiwengerObjectMapper objectMapper;
     //TODO instantiate the config files containing the URLs from the properties files injected by Spring
 
     public BiwengerApiContext(final Login pLogin) throws InvalidLoginException {
         this.login = pLogin;
         this.initializeHeaders();
+        this.initializeObjectMapper();
         this.initializeRestTemplate();
         this.logInIfNecessary();
         // TODO load account headers
@@ -33,6 +40,17 @@ public class BiwengerApiContext {
             initializeRestTemplate();
         }
         return restTemplate;
+    }
+
+    public BiwengerObjectMapper getObjectMapper() {
+        if (objectMapper == null) {
+            initializeObjectMapper();
+        }
+        return objectMapper;
+    }
+
+    private void initializeObjectMapper() {
+        objectMapper = new BiwengerObjectMapper();
     }
 
     private void initializeRestTemplate() {
@@ -46,7 +64,7 @@ public class BiwengerApiContext {
                 .withClientHttpRequestFactory(requestFactory)
                 .withClientHttpRequestInterceptors(headerInterceptor)
                 .withResponseErrorHandler(new BiwengerResponseErrorHandler())
-                .withObjectMapperModule(localDateTimeModule)
+                .withJacksonObjectMapper(objectMapper)
                 .build();
     }
 

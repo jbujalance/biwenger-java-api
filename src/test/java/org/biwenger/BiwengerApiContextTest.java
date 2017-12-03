@@ -3,6 +3,7 @@ package org.biwenger;
 import org.biwenger.context.BiwengerApiContext;
 import org.biwenger.entity.Login;
 import org.biwenger.exception.InvalidLoginException;
+import org.biwenger.helper.ContextTestHelper;
 import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;

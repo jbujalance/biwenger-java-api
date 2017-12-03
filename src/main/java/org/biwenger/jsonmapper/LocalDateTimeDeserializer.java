@@ -1,4 +1,4 @@
-package org.biwenger.resttemplate;
+package org.biwenger.jsonmapper;
 
 
 import com.fasterxml.jackson.core.JsonParser;

@@ -1,8 +1,9 @@
-package org.biwenger;
+package org.biwenger.request;
 
 import org.biwenger.context.BiwengerApi;
 import org.biwenger.context.BiwengerApiContext;
 import org.biwenger.exception.InvalidLoginException;
+import org.biwenger.helper.ContextTestHelper;
 import org.biwenger.response.account.AccountResponse;
 import org.junit.Test;
 

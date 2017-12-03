@@ -1,4 +1,4 @@
-package org.biwenger;
+package org.biwenger.helper;
 
 import org.biwenger.context.BiwengerApiContext;
 import org.biwenger.entity.Login;
