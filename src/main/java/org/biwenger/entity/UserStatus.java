@@ -4,43 +4,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class UserStatus {
     @JsonProperty("points")
-    private int points;
+    private Integer points;
     @JsonProperty("balance")
-    private int balance;
+    private Integer balance;
     @JsonProperty("offers")
-    private int offers;
+    private Integer offers;
     @JsonProperty("bids")
-    private int bids;
+    private Integer bids;
 
-    public int getPoints() {
+    public Integer getPoints() {
         return points;
     }
 
-    public void setPoints(int pPoints) {
+    public void setPoints(Integer pPoints) {
         points = pPoints;
     }
 
-    public int getBalance() {
+    public Integer getBalance() {
         return balance;
     }
 
-    public void setBalance(int pBalance) {
+    public void setBalance(Integer pBalance) {
         balance = pBalance;
     }
 
-    public int getOffers() {
+    public Integer getOffers() {
         return offers;
     }
 
-    public void setOffers(int pOffers) {
+    public void setOffers(Integer pOffers) {
         offers = pOffers;
     }
 
-    public int getBids() {
+    public Integer getBids() {
         return bids;
     }
 
-    public void setBids(int pBids) {
+    public void setBids(Integer pBids) {
         bids = pBids;
     }
 }

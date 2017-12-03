@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class User {
     @JsonProperty("id")
-    private int id;
+    private Integer id;
     @JsonProperty("name")
     private String name;
     @JsonProperty("icon")
@@ -16,11 +16,11 @@ public class User {
     @JsonProperty("status")
     private UserStatus status;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int pId) {
+    public void setId(Integer pId) {
         id = pId;
     }
 

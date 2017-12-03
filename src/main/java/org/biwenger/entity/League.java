@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
 
 public class League {
     @JsonProperty("id")
-    private int id;
+    private Integer id;
     @JsonProperty("name")
     private String name;
     @JsonProperty("type")
@@ -26,11 +26,11 @@ public class League {
     @JsonProperty("settings")
     private LeagueSettings settings;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int pId) {
+    public void setId(Integer pId) {
         id = pId;
     }
 

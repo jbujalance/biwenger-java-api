@@ -17,6 +17,7 @@ public class Login {
     private String password;
     @JsonIgnore
     private String token;
+    @JsonIgnore
     private static Logger LOGGER = LoggerFactory.getLogger(Login.class);
 
     public Login(final String pEmail, final String pPassword) {

@@ -8,13 +8,13 @@ public class LeagueSettings {
     @JsonProperty("privacy")
     private String privacy;
     @JsonProperty("onlyAdminNews")
-    private int onlyAdminNews;
+    private Integer onlyAdminNews;
     @JsonProperty("cancellationClause")
-    private int cancellationClause;
+    private Integer cancellationClause;
     @JsonProperty("immediateSales")
-    private int immediateSales;
+    private Integer immediateSales;
     @JsonProperty("jackpot")
-    private int jackpot;
+    private Integer jackpot;
     @JsonProperty("balance")
     private String balance;
     @JsonProperty("userOffers")
@@ -22,17 +22,17 @@ public class LeagueSettings {
     @JsonProperty("loans")
     private String loans;
     @JsonProperty("loansMinRounds")
-    private int loansMinRounds;
+    private Integer loansMinRounds;
     @JsonProperty("challengesAllow")
-    private int challengesAllow;
+    private Integer challengesAllow;
     @JsonProperty("roundDelayed")
     private String roundDelayed;
     @JsonProperty("lineupAllowExtra")
-    private boolean lineupAllowExtra;
+    private Boolean lineupAllowExtra;
     @JsonProperty("lineupReserves")
-    private boolean lineupReserves;
+    private Boolean lineupReserves;
     @JsonProperty("favoritesAllow")
-    private boolean favoritesAllow;
+    private Boolean favoritesAllow;
 
     public String getSecret() {
         return secret;
@@ -50,35 +50,35 @@ public class LeagueSettings {
         privacy = pPrivacy;
     }
 
-    public int getOnlyAdminNews() {
+    public Integer getOnlyAdminNews() {
         return onlyAdminNews;
     }
 
-    public void setOnlyAdminNews(int pOnlyAdminNews) {
+    public void setOnlyAdminNews(Integer pOnlyAdminNews) {
         onlyAdminNews = pOnlyAdminNews;
     }
 
-    public int getCancellationClause() {
+    public Integer getCancellationClause() {
         return cancellationClause;
     }
 
-    public void setCancellationClause(int pCancellationClause) {
+    public void setCancellationClause(Integer pCancellationClause) {
         cancellationClause = pCancellationClause;
     }
 
-    public int getImmediateSales() {
+    public Integer getImmediateSales() {
         return immediateSales;
     }
 
-    public void setImmediateSales(int pImmediateSales) {
+    public void setImmediateSales(Integer pImmediateSales) {
         immediateSales = pImmediateSales;
     }
 
-    public int getJackpot() {
+    public Integer getJackpot() {
         return jackpot;
     }
 
-    public void setJackpot(int pJackpot) {
+    public void setJackpot(Integer pJackpot) {
         jackpot = pJackpot;
     }
 
@@ -106,19 +106,19 @@ public class LeagueSettings {
         loans = pLoans;
     }
 
-    public int getLoansMinRounds() {
+    public Integer getLoansMinRounds() {
         return loansMinRounds;
     }
 
-    public void setLoansMinRounds(int pLoansMinRounds) {
+    public void setLoansMinRounds(Integer pLoansMinRounds) {
         loansMinRounds = pLoansMinRounds;
     }
 
-    public int getChallengesAllow() {
+    public Integer getChallengesAllow() {
         return challengesAllow;
     }
 
-    public void setChallengesAllow(int pChallengesAllow) {
+    public void setChallengesAllow(Integer pChallengesAllow) {
         challengesAllow = pChallengesAllow;
     }
 
@@ -130,27 +130,27 @@ public class LeagueSettings {
         roundDelayed = pRoundDelayed;
     }
 
-    public boolean isLineupAllowExtra() {
+    public Boolean isLineupAllowExtra() {
         return lineupAllowExtra;
     }
 
-    public void setLineupAllowExtra(boolean pLineupAllowExtra) {
+    public void setLineupAllowExtra(Boolean pLineupAllowExtra) {
         lineupAllowExtra = pLineupAllowExtra;
     }
 
-    public boolean isLineupReserves() {
+    public Boolean isLineupReserves() {
         return lineupReserves;
     }
 
-    public void setLineupReserves(boolean pLineupReserves) {
+    public void setLineupReserves(Boolean pLineupReserves) {
         lineupReserves = pLineupReserves;
     }
 
-    public boolean isFavoritesAllow() {
+    public Boolean isFavoritesAllow() {
         return favoritesAllow;
     }
 
-    public void setFavoritesAllow(boolean pFavoritesAllow) {
+    public void setFavoritesAllow(Boolean pFavoritesAllow) {
         favoritesAllow = pFavoritesAllow;
     }
 }

@@ -10,7 +10,7 @@ import java.util.List;
  */
 public class Account {
     @JsonProperty("id")
-    private int id;
+    private Integer id;
     @JsonProperty("email")
     private String email;
     @JsonProperty("locale")
@@ -22,11 +22,11 @@ public class Account {
     @JsonProperty("devices")
     private List<String> devices;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int pId) {
+    public void setId(Integer pId) {
         this.id = pId;
     }
 
