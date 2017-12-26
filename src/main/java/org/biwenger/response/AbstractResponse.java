@@ -2,12 +2,12 @@ package org.biwenger.response;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public abstract class AbstractResponse<Data extends AbstractData> {
+public abstract class AbstractResponse<D extends AbstractData> {
 
     @JsonProperty("status")
     private Integer status;
     @JsonProperty("data")
-    private Data data;
+    private D data;
 
     public Integer getStatus() {
         return status;
@@ -17,11 +17,11 @@ public abstract class AbstractResponse<Data extends AbstractData> {
         this.status = pStatus;
     }
 
-    public Data getData() {
+    public D getData() {
         return data;
     }
 
-    public void setData(Data pData) {
+    public void setData(D pData) {
         this.data = pData;
     }
 }

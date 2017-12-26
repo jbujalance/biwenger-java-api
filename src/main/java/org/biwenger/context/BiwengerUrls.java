@@ -6,6 +6,6 @@ public class BiwengerUrls {
     public static final String ACCOUNT_URL = BASE_URL + "account";
     public static final String LOGIN_URL = BASE_URL + "auth/login";
     public static final String HOME_URL = BASE_URL + "home";
-    public static final String LEAGUE_URL = BASE_URL + "league";
+    public static final String LEAGUE_URL = BASE_URL + "league?fields=*,standings,group&include=all";
     public static final String COMUNIAME_RESOURCES_URL = "https://cdn.comuniame.com/";
 }

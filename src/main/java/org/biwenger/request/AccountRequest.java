@@ -17,7 +17,7 @@ public class AccountRequest implements IRequest<AccountResponse> {
 
     @Override
     public AccountResponse await() {
-        LOGGER.debug("Processing account request...");
+        LOGGER.debug("Sending account request...");
         AccountResponse response = context.getRestTemplate().getForObject(BiwengerUrls.ACCOUNT_URL, AccountResponse.class);
         LOGGER.info("The user '" + context.getLoginEmail() + "' requested account information");
         return response;

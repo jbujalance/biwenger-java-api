@@ -14,7 +14,7 @@ public class AccountData extends AbstractData {
     @JsonProperty("leagues")
     private List<League> leagues;
     @JsonProperty("version")
-    private int version;
+    private Integer version;
 
     public Account getAccount() {
         return account;
@@ -32,11 +32,11 @@ public class AccountData extends AbstractData {
         leagues = pLeagues;
     }
 
-    public int getVersion() {
+    public Integer getVersion() {
         return version;
     }
 
-    public void setVersion(int pVersion) {
+    public void setVersion(Integer pVersion) {
         version = pVersion;
     }
 }

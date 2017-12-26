@@ -18,11 +18,17 @@ public abstract class ContextTestHelper {
         return new BiwengerApiContext(pLogin);
     }
 
-    public BiwengerApiContext buildValidContext() throws InvalidLoginException {
+    public BiwengerApiContext validContext() throws InvalidLoginException {
         return new BiwengerApiContext(validLogin());
     }
 
-    public BiwengerApiContext buildInvalidContext() throws InvalidLoginException {
+    public BiwengerApiContext invalidContext() throws InvalidLoginException {
         return new BiwengerApiContext(invalidLogin());
+    }
+
+    public BiwengerApiContext buildValidContextWithLeagueHeader(int pLeagueId) throws InvalidLoginException {
+        BiwengerApiContext context = validContext();
+        context.setXLeagueHeader(pLeagueId);
+        return context;
     }
 }

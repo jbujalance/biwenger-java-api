@@ -11,7 +11,7 @@ import static org.junit.Assert.assertNotNull;
 
 public class AccountRequestTest extends ContextTestHelper {
 
-    private final BiwengerApiContext validContext = buildValidContext();
+    private final BiwengerApiContext validContext = validContext();
 
     public AccountRequestTest() throws InvalidLoginException {
     }

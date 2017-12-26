@@ -1,6 +1,7 @@
-package org.biwenger.response.account;
+package org.biwenger.response;
 
 import org.biwenger.helper.DeserializingTestHelper;
+import org.biwenger.response.account.AccountResponse;
 import org.junit.Assert;
 import org.junit.Test;
 

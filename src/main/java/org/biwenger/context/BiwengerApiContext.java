@@ -5,10 +5,7 @@ import org.biwenger.entity.Login;
 import org.biwenger.exception.InvalidLoginException;
 import org.biwenger.jsonmapper.BiwengerObjectMapper;
 import org.biwenger.jsonmapper.LocalDateTimeDeserializer;
-import org.biwenger.resttemplate.BiwengerResponseErrorHandler;
-import org.biwenger.resttemplate.HeaderRequestInterceptor;
-import org.biwenger.resttemplate.HeadersBuilder;
-import org.biwenger.resttemplate.RestTemplateBuilder;
+import org.biwenger.resttemplate.*;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.web.client.RestTemplate;
@@ -70,9 +67,9 @@ public class BiwengerApiContext {
 
     private void initializeHeaders() {
         HttpHeaders headers = new HeadersBuilder()
-                .add(HttpHeaders.CONTENT_TYPE,"application/json;charset=UTF-8")
-                .add(HttpHeaders.ACCEPT, "application/json, text/plain, */*")
-                .add(HttpHeaders.ACCEPT_ENCODING, "gzip, deflate, br")
+                .add(BiwengerHttpHeaders.CONTENT_TYPE,"application/json;charset=UTF-8")
+                .add(BiwengerHttpHeaders.ACCEPT, "application/json, text/plain, */*")
+                .add(BiwengerHttpHeaders.ACCEPT_ENCODING, "gzip, deflate, br")
                 .build();
         headerInterceptor = new HeaderRequestInterceptor();
         headerInterceptor.setHeaders(headers);
@@ -87,6 +84,10 @@ public class BiwengerApiContext {
 
     public String getLoginEmail() {
         return this.login.getEmail();
+    }
+
+    public void setXLeagueHeader(int pLeagueId) {
+        headerInterceptor.addHeader(BiwengerHttpHeaders.XLEAGUE, Integer.toString(pLeagueId));
     }
 
 }

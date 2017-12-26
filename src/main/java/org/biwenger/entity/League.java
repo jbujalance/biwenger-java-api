@@ -3,7 +3,7 @@ package org.biwenger.entity;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.time.LocalDateTime;
-
+//TODO set Optional getters for optional fields (created, type, icon, etc)
 public class League {
     @JsonProperty("id")
     private Integer id;
@@ -25,6 +25,8 @@ public class League {
     private String competition;
     @JsonProperty("settings")
     private LeagueSettings settings;
+    @JsonProperty("standings")
+    private Standing[] standings;
 
     public Integer getId() {
         return id;
@@ -104,5 +106,13 @@ public class League {
 
     public void setSettings(LeagueSettings pSettings) {
         settings = pSettings;
+    }
+
+    public Standing[] getStandings() {
+        return standings;
+    }
+
+    public void setStandings(Standing[] pStandings) {
+        standings = pStandings;
     }
 }

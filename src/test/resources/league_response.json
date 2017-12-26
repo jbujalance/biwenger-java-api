@@ -1,0 +1,185 @@
+{
+  "status": 200,
+  "data": {
+    "id": 504434,
+    "name": "Tulliditos",
+    "created": 1502904572,
+    "type": "normal",
+    "mode": "normal",
+    "icon": "",
+    "competition": "la-liga",
+    "standings": [
+      {
+        "id": 2087668,
+        "name": "Pablofc",
+        "icon": "icons/12.png",
+        "points": 777,
+        "positionInc": 0,
+        "group": "manager",
+        "teamSize": 22,
+        "teamValue": 101210000,
+        "lastPositions": [
+          1,
+          3,
+          2,
+          4,
+          2
+        ],
+        "lastAccess": 1514283846,
+        "position": 1
+      },
+      {
+        "id": 2088275,
+        "name": "RMCF",
+        "icon": "icons/15.png",
+        "points": 653,
+        "positionInc": 0,
+        "group": "",
+        "teamSize": 16,
+        "teamValue": 66940000,
+        "lastPositions": [
+          3,
+          8,
+          8,
+          3,
+          3
+        ],
+        "lastAccess": 1514243543,
+        "position": 2
+      },
+      {
+        "id": 2088028,
+        "name": "JGC",
+        "icon": "icons/31.png",
+        "points": 613,
+        "positionInc": 3,
+        "group": "",
+        "teamSize": 20,
+        "teamValue": 68180000,
+        "lastPositions": [
+          2,
+          6,
+          1,
+          7,
+          5
+        ],
+        "lastAccess": 1514278996,
+        "position": 3
+      },
+      {
+        "id": 2125636,
+        "name": "A.D.F.B. Bujalance",
+        "icon": "icons/24.png",
+        "points": 608,
+        "positionInc": -1,
+        "group": "",
+        "teamSize": 15,
+        "teamValue": 72000000,
+        "lastPositions": [
+          8,
+          1,
+          4,
+          1,
+          6
+        ],
+        "lastAccess": 1514284321,
+        "position": 4
+      },
+      {
+        "id": 2212555,
+        "name": "César",
+        "icon": "https://graph.facebook.com/1687396954635667/picture?height=300&width=300",
+        "points": 607,
+        "positionInc": 0,
+        "group": "",
+        "teamSize": 15,
+        "teamValue": 66860000,
+        "lastPositions": [
+          5,
+          2,
+          3,
+          5,
+          1
+        ],
+        "lastAccess": 1514242873,
+        "position": 5
+      },
+      {
+        "id": 2087763,
+        "name": "Roldan F.C.",
+        "icon": "https://graph.facebook.com/10156700869779199/picture?height=300&width=300",
+        "points": 590,
+        "positionInc": -2,
+        "group": "",
+        "teamSize": 14,
+        "teamValue": 69990000,
+        "lastPositions": [
+          7,
+          7,
+          7,
+          6,
+          8
+        ],
+        "lastAccess": 1514235698,
+        "position": 6
+      },
+      {
+        "id": 2088353,
+        "name": "Empané",
+        "icon": "icons/10.png",
+        "points": 564,
+        "positionInc": 0,
+        "group": "",
+        "teamSize": 16,
+        "teamValue": 64920000,
+        "lastPositions": [
+          9,
+          4,
+          6,
+          2,
+          9
+        ],
+        "lastAccess": 1514110252,
+        "position": 7
+      },
+      {
+        "id": 2088105,
+        "name": "TranquiYoPago",
+        "icon": "icons/30.png",
+        "points": 532,
+        "positionInc": 0,
+        "group": "",
+        "teamSize": 21,
+        "teamValue": 53980000,
+        "lastPositions": [
+          6,
+          5,
+          5,
+          9,
+          7
+        ],
+        "lastAccess": 1514241601,
+        "position": 8
+      },
+      {
+        "id": 2180739,
+        "name": "Ieeepale",
+        "icon": "https://graph.facebook.com/10212435069664679/picture?height=300&width=300",
+        "points": 433,
+        "positionInc": 0,
+        "group": "",
+        "teamSize": 16,
+        "teamValue": 35170000,
+        "lastPositions": [
+          4,
+          9,
+          9,
+          8,
+          4
+        ],
+        "lastAccess": 1512198383,
+        "position": 9
+      }
+    ]
+  }
+}
